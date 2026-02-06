@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valentines Day Card</title>
     <style>
-        body{
+        body {
             background-color: #ffb6c1;
             display: flex;
             justify-content: center;
@@ -13,28 +13,41 @@
             height: 100vh;
             margin: 0;
             font-family: sans-serif;
+            /* Force Safari to stay in light mode for this page */
+            color-scheme: light; 
         }
-        .card{
+        .card {
             background: white;
             padding: 40px;
             border-radius: 20px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
             text-align: center;
+            width: 80%; /* Added for mobile scaling */
+            max-width: 400px;
         }
-        h1{
+        h1 {
             color: #ff0000;
             margin-bottom: 20px;
         }
-        button{
+        button {
             padding: 10px 25px;
             font-size: 19px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            margin: 0 10px;
+            margin: 10px;
+            /* THE SAFARI FIXES */
+            appearance: none;
+            -webkit-appearance: none;
         }
-        #yes { background-color: #c1f0c1; } /* Light green */
-        #no { background-color: #f08a8a; color: white; }
+        #yes { 
+            background-color: #c1f0c1; 
+            color: #000000; /* Force black text */
+        } 
+        #no { 
+            background-color: #f08a8a; 
+            color: white; 
+        }
     </style>
 </head>
 <body>
